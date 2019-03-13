@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+
+<title>
+    Auto-advising Apps
+</title>
+
+<head>
+    <h3>
+        Welcome to Auto-Advising Apps
+    </h3>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"
+        integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <form id="studyPlan">
+        <table>
+            <!--border="1px solid black"-->
+            <tbody>
+                <!-- Math Course Selection -->
+                <thead>
+                    <tr>
+                        <th>
+                            Choose one Math course
+                        </th>
+                    </tr>
+                </thead>
+
+                <!-- EE Math -->
+                <thead>
+                    <tr>
+                        <th>
+                            EE
+                        </th>
+                    </tr>
+                </thead>
+
+                <tr>
+                    <td>
+                        <select id="math_term" name="math_term">
+                            <option value="">--select--</option>
+                            <option id="2019 Fall" value="2019 Fall">2019 Fall</option>
+                            <option id="2019 Spring" value="2019 Spring">2019 Spring</option>
+                        </select>
+                    </td>
+
+                    <td>
+                        <input type="radio" id="EE602" name="math" value="EE602">
+                        <label for="EE602">EE 602 - Analytical Methods in Electrical Engineering</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="radio" id="EE605" name="math" value="EE605">
+                        <label for="EE605">EE 605 - Probability and Stochastic processes 1</label>
+                    </td>
+                </tr>
+
+                <!-- CPE Math -->
+                <thead>
+                    <tr>
+                        <th>
+                            CPE
+                        </th>
+                    </tr>
+                </thead>
+
+                <tr>
+                    <td>
+                        <select id="math_term" name="math_term">
+                            <option value="">--select--</option>
+                            <option id="2019 Fall" value="2019 Fall">2019 Fall</option>
+                            <option id="2019 Spring" value="2019 Spring">2019 Spring</option>
+                        </select>
+                    </td>
+
+
+                    <td>
+                        <input type="radio" id="CPE602" name="math" value="CPE602">
+                        <label for="CPE602">CPE 602 - Applied Discreet Mathematics</label>
+                    </td>
+                </tr>
+
+                <!-- AAI Math -->
+                <thead>
+                    <tr>
+                        <th>
+                            AAI
+                        </th>
+                    </tr>
+                </thead>
+
+                <tr>
+                    <td>
+                        <select id="math_term" name="math_term">
+                            <option value="">--select--</option>
+                            <option id="2019 Fall" value="2019 Fall">2019 Fall</option>
+                            <option id="2019 Spring" value="2019 Spring">2019 Spring</option>
+                        </select>
+                    </td>
+
+                    <td>
+                        <input type="radio" id="EE602" name="math" value="EE602">
+                        <label for="EE602">EE 602 - Analytical Methods in Electrical Engineering</label>
+                    </td>
+                </tr>
+
+                <!-- Core course Selection -->
+                <thead>
+                    <tr>
+                        <th>
+                            Choose four core courses
+                        </th>
+                    </tr>
+                </thead>
+
+                <!-- EE -->
+                <thead>
+                    <tr>
+                        <th>
+                            EE
+                        </th>
+                    </tr>
+                </thead>
+
+                <!-- EE Core 1 -->
+                <tr>
+                    <td>
+                        <select id="EE_core1_term" name="EE_core1_term">
+                            <option value="">--select--</option>
+                            <option id="2019 Fall" value="2019 Fall">2019 Fall</option>
+                            <option id="2019 Spring" value="2019 Spring">2019 Spring</option>
+                        </select>
+                    </td>
+
+                    <td>
+                        <input class="core_courses" type="checkbox" id="EE548" name="EE_core1" value="EE548">
+                        <label for="EE548">EE 548 - Digital Signal Processing</label>
+                    </td>
+                </tr>
+
+                <!-- EE Core 2 -->
+                <tr>
+                    <td>
+                        <select id="EE_core2_term" name="EE_core2_term">
+                            <option value="">--select--</option>
+                            <option id="2019 Fall" value="2019 Fall">2019 Fall</option>
+                            <option id="2019 Spring" value="2019 Spring">2019 Spring</option>
+                        </select>
+                    </td>
+
+                    <td>
+                        <input class="core_courses" type="checkbox" id="EE575" name="EE_core2" value="EE575">
+                        <label for="EE575">EE 575 - Introduction to Control Theory</label>
+                    </td>
+                </tr>
+
+                <!-- EE Core 3 -->
+                <!-- <tr>
+                    <td>
+                        <select id="EE_core3_term" name="EE_core3_term">
+                            <option value="">--select--</option>
+                            <option id="2019 Fall" value="2019 Fall">2019 Fall</option>
+                            <option id="2019 Spring" value="2019 Spring">2019 Spring</option>
+                        </select>
+                    </td>
+
+                    <td>
+                        <input class="core_courses" type="checkbox" id="EE582" name="EE_core3" value="EE582">
+                        <label for="EE582">EE582 - Wireless Networking: Architecture, Protocols and Standards</label>
+                    </td>
+                </tr> -->
+
+                <!-- EE Core 4 -->
+                <tr>
+                    <td>
+                        <select id="EE_core4_term" name="EE_core4_term">
+                            <option value="">--select--</option>
+                            <option id="2019 Fall" value="2019 Fall">2019 Fall</option>
+                            <option id="2019 Spring" value="2019 Spring">2019 Spring</option>
+                        </select>
+                    </td>
+
+                    <td>
+                        <input class="core_courses" type="checkbox" id="EE603" name="EE_core4" value="EE603">
+                        <label for="EE603">EE 603 - Linear Systems Theory</label>
+                    </td>
+                </tr>
+
+                <!-- EE Core 5 -->
+                <tr>
+                    <td>
+                        <select id="EE_core5_term" name="EE_core5_term">
+                            <option value="">--select--</option>
+                            <option id="2019 Fall" value="2019 Fall">2019 Fall</option>
+                            <option id="2019 Spring" value="2019 Spring">2019 Spring</option>
+                        </select>
+                    </td>
+
+                    <td>
+                        <input class="core_courses" type="checkbox" id="EE608" name="EE_core5" value="EE608">
+                        <label for="EE608">EE 608 - Applied Modeling and Optimization</label>
+                    </td>
+                </tr>
+
+                <!-- EE Core 6 -->
+                <tr>
+                    <td>
+                        <select id="EE_core6_term" name="EE_core6_term">
+                            <option value="">--select--</option>
+                            <option id="2019 Fall" value="2019 Fall">2019 Fall</option>
+                            <option id="2019 Spring" value="2019 Spring">2019 Spring</option>
+                        </select>
+                    </td>
+
+                    <td>
+                        <input class="core_courses" type="checkbox" id="EE609" name="EE_core6" value="EE609">
+                        <label for="EE609">EE 609 - Communication Theory</label>
+                    </td>
+                </tr>
+
+                <!-- CPE -->
+                <thead>
+                    <tr>
+                        <th>
+                            CPE
+                        </th>
+                    </tr>
+                </thead>
+
+                <!-- CPE Core 1 -->
+                <tr>
+                    <td>
+                        <select id="CPE_core1_term" name="CPE_core1_term">
+                            <option value="">--select--</option>
+                            <option id="2019 Fall" value="2019 Fall">2019 Fall</option>
+                            <option id="2019 Spring" value="2019 Spring">2019 Spring</option>
+                        </select>
+                    </td>
+
+                    <td>
+                        <input class="core_courses" type="checkbox" id="CPE517" name="CPE_core1" value="CPE517">
+                        <label for="CPE517">CPE 517 - Digital and Computer Systems Architecture</label>
+                    </td>
+                </tr>
+
+                <!-- CPE Core 2 -->
+                <tr>
+                    <td>
+                        <select id="CPE_core2_term" name="CPE_core2_term">
+                            <option value="">--select--</option>
+                            <option id="2019 Fall" value="2019 Fall">2019 Fall</option>
+                            <option id="2019 Spring" value="2019 Spring">2019 Spring</option>
+                        </select>
+                    </td>
+
+                    <td>
+                        <input class="core_courses" type="checkbox" id="CPE555" name="CPE_core2" value="CPE555">
+                        <label for="CPE555">CPE 555 - Real-Time and Embedded Systems</label>
+                    </td>
+                </tr>
+
+                <!-- CPE Core 3 -->
+                <tr>
+                    <td>
+                        <select id="CPE_core3_term" name="CPE_core3_term">
+                            <option value="">--select--</option>
+                            <option id="2019 Fall" value="2019 Fall">2019 Fall</option>
+                            <option id="2019 Spring" value="2019 Spring">2019 Spring</option>
+                        </select>
+                    </td>
+
+                    <td>
+                        <input class="core_courses" type="checkbox" id="CPE593" name="CPE_core3" value="CPE593">
+                        <label for="CPE593">CPE 593 - Applied Data Structures and Algorithms</label>
+                    </td>
+                </tr>
+
+                <!-- CPE Core 4 -->
+                <!-- <tr>
+                    <td>
+                        <select id="CPE_core4_term" name="CPE_core4_term">
+                            <option value="">--select--</option>
+                            <option id="2019 Fall" value="2019 Fall">2019 Fall</option>
+                            <option id="2019 Spring" value="2019 Spring">2019 Spring</option>
+                        </select>
+                    </td>
+
+                    <td>
+                        <input class="core_courses" type="checkbox" id="CPE679" name="CPE_core4" value="CPE679">
+                        <label for="CPE679">CPE679 - Computer and Information Networks</label>
+                    </td>
+                </tr> -->
+
+                <!-- CPE Core 5 -->
+                <tr>
+                    <td>
+                        <select id="CPE_core5_term" name="CPE_core5_term">
+                            <option value="">--select--</option>
+                            <option id="2019 Fall" value="2019 Fall">2019 Fall</option>
+                            <option id="2019 Spring" value="2019 Spring">2019 Spring</option>
+                        </select>
+                    </td>
+
+                    <td>
+                        <input class="core_courses" type="checkbox" id="CPE690" name="CPE_core5" value="CPE690">
+                        <label for="CPE690">CPE 690 - Introduction to VLSI Design</label>
+                    </td>
+                </tr>
+
+                <!-- CPE Core 6 -->
+                <tr>
+                    <td>
+                        <select id="CPE_core6_term" name="CPE_core6_term">
+                            <option value="">--select--</option>
+                            <option id="2019 Fall" value="2019 Fall">2019 Fall</option>
+                            <option id="2019 Spring" value="2019 Spring">2019 Spring</option>
+                        </select>
+                    </td>
+
+                    <td>
+                        <input class="core_courses" type="checkbox" id="EE608" name="CPE_core6" value="EE608">
+                        <label for="EE608">EE 608 - Applied Modeling & Optimization</label>
+                    </td>
+                </tr>
+
+                <!-- AAI -->
+                <thead>
+                    <tr>
+                        <th>
+                            AAI
+                        </th>
+                    </tr>
+                </thead>
+
+                <!-- AAI Core 1 -->
+                <tr>
+                    <td>
+                        <select id="AAI_core1_term" name="AAI_core1_term">
+                            <option value="">--select--</option>
+                            <option id="2019 Fall" value="2019 Fall">2019 Fall</option>
+                            <option id="2019 Spring" value="2019 Spring">2019 Spring</option>
+                        </select>
+                    </td>
+
+                    <td>
+                        <input class="core_courses" type="checkbox" id="CPE646" name="AAI_core1" value="CPE646">
+                        <label for="CPE646">CPE 646 - Pattern Recognition and Classification</label>
+                    </td>
+                </tr>
+
+                <!-- AAI Core 2 -->
+                <tr>
+                    <td>
+                        <select id="AAI_core2_term" name="AAI_core2_term">
+                            <option value="">--select--</option>
+                            <option id="2019 Fall" value="2019 Fall">2019 Fall</option>
+                            <option id="2019 Spring" value="2019 Spring">2019 Spring</option>
+                        </select>
+                    </td>
+
+                    <td>
+                        <input class="core_courses" type="checkbox" id="CPE695" name="AAI_core2" value="CPE695">
+                        <label for="CPE695">CPE 695 - Applied Machine Learning</label>
+                    </td>
+                </tr>
+
+                <!-- AAI Core 3 -->
+                <tr>
+                    <td>
+                        <select id="AAI_core3_term" name="AAI_core3_term">
+                            <option value="">--select--</option>
+                            <option id="2019 Fall" value="2019 Fall">2019 Fall</option>
+                            <option id="2019 Spring" value="2019 Spring">2019 Spring</option>
+                        </select>
+                    </td>
+
+                    <td>
+                        <input class="core_courses" type="checkbox" id="EE608" name="AAI_core3" value="EE608">
+                        <label for="EE608">EE 608 - Applied Modeling & Optimization</label>
+                    </td>
+                </tr>
+
+                <!-- AAI Core 4 -->
+                <tr>
+                    <td>
+                        <select id="AAI_core4_term" name="AAI_core4_term">
+                            <option value="">--select--</option>
+                            <option id="2019 Fall" value="2019 Fall">2019 Fall</option>
+                            <option id="2019 Spring" value="2019 Spring">2019 Spring</option>
+                        </select>
+                    </td>
+
+                    <td>
+                        <input class="core_courses" type="checkbox" id="EE627" name="AAI_core4" value="EE627">
+                        <label for="EE627">EE 627 - Data Acquisition and Processing 1 (Big Data)</label>
+                    </td>
+                </tr>
+
+                <!-- AAI Core 5 -->
+                <tr>
+                    <td>
+                        <select id="AAI_core5_term" name="AAI_core5_term">
+                            <option value="">--select--</option>
+                            <option id="2019 Fall" value="2019 Fall">2019 Fall</option>
+                            <option id="2019 Spring" value="2019 Spring">2019 Spring</option>
+                        </select>
+                    </td>
+
+                    <td>
+                        <input class="core_courses" type="checkbox" id="EE628" name="AAI_core5" value="EE628">
+                        <label for="EE628">EE 628 - Data Acquisition and Processing 2 (Deep Learning)</label>
+                    </td>
+                </tr>
+
+                <!-- AAI Core 6 -->
+                <tr>
+                    <td>
+                        <select id="AAI_core6_term" name="AAI_core6_term">
+                            <option value="">--select--</option>
+                            <option id="2019 Fall" value="2019 Fall">2019 Fall</option>
+                            <option id="2019 Spring" value="2019 Spring">2019 Spring</option>
+                        </select>
+                    </td>
+
+                    <td>
+                        <input class="core_courses" type="checkbox" id="EE672" name="AAI_core6" value="EE672">
+                        <label for="EE672">EE 672 - Applied Game Theory and Evolutionary Algorithms</label>
+                    </td>
+                </tr>
+
+                <!-- Concentration Courses -->
+
+                <!-- Communications -->
+                <thead>
+                    <tr>
+                        <th>
+                            Choose three concentration courses
+                        </th>
+                    </tr>
+                </thead>
+
+                <thead>
+                    <tr>
+                        <th>
+                            Concentration 1: Communications
+                        </th>
+                    </tr>
+                </thead>
+
+                <!-- Communication 1 -->
+                <tr>
+                    <td>
+                        <select id="communications1_term" name="communications1_term">
+                            <option value="">--select--</option>
+                            <option id="2019 Fall" value="2019 Fall">2019 Fall</option>
+                            <option id="2019 Spring" value="2019 Spring">2019 Spring</option>
+                        </select>
+                    </td>
+
+                    <td>
+                        <input class="communications" type="checkbox" id="EE510" name="communications1" value="EE510">
+                        <label for="EE510">EE 510 - Introduction to Radar Systems</label>
+                    </td>
+                </tr>
+
+                <!-- Communication 2 -->
+                <tr>
+                    <td>
+                        <select id="communications2_term" name="communications2_term">
+                            <option value="">--select--</option>
+                            <option id="2019 Fall" value="2019 Fall">2019 Fall</option>
+                            <option id="2019 Spring" value="2019 Spring">2019 Spring</option>
+                        </select>
+                    </td>
+
+                    <td>
+                        <input class="communications" type="checkbox" id="EE568" name="communications2" value="EE568">
+                        <label for="EE568">EE 568 - Software-Defined radio</label>
+                    </td>
+                </tr>
+
+                <!-- Communication 3 -->
+                <tr>
+                    <td>
+                        <select id="communications3_term" name="communications3_term">
+                            <option value="">--select--</option>
+                            <option id="2019 Fall" value="2019 Fall">2019 Fall</option>
+                            <option id="2019 Spring" value="2019 Spring">2019 Spring</option>
+                        </select>
+                    </td>
+
+                    <td>
+                        <input class="communications" type="checkbox" id="EE583" name="communications3" value="EE583">
+                        <label for="EE583">EE 583 - Wireless Communications</label>
+                    </td>
+                </tr>
+
+                <!-- Communication 4 -->
+                <tr>
+                    <td>
+                        <select id="communications4_term" name="communications4_term">
+                            <option value="">--select--</option>
+                            <option id="2019 Fall" value="2019 Fall">2019 Fall</option>
+                            <option id="2019 Spring" value="2019 Spring">2019 Spring</option>
+                        </select>
+                    </td>
+
+                    <td>
+                        <input class="communications" type="checkbox" id="EE585" name="communications4" value="EE585">
+                        <label for="EE585">EE 585 - Physical Design of Wireless Systems</label>
+                    </td>
+                </tr>
+
+                <!-- Communication 5 -->
+                <!-- <tr>
+                    <td>
+                        <select id="communications5_term" name="communications5_term">
+                            <option value="">--select--</option>
+                            <option id="2019 Fall" value="2019 Fall">2019 Fall</option>
+                            <option id="2019 Spring" value="2019 Spring">2019 Spring</option>
+                        </select>
+                    </td>
+
+                    <td>
+                        <input class="communications" type="checkbox" id="EE670" name="communications5" value="EE670">
+                        <label for="EE670">EE 670 - Information Theory and Coding</label>
+                    </td>
+                </tr> -->
+
+                <!-- Communication 6 -->
+                <tr>
+                    <td>
+                        <select id="communications6_term" name="communications6_term">
+                            <option value="">--select--</option>
+                            <option id="2019 Fall" value="2019 Fall">2019 Fall</option>
+                            <option id="2019 Spring" value="2019 Spring">2019 Spring</option>
+                        </select>
+                    </td>
+                
+                    <td>
+                        <input class="communications" type="checkbox" id="EE582" name="communications6" value="EE582">
+                        <label for="EE582">EE 582 - Wireless Networking: Architecture, Protocols and Standards</label>
+                    </td>
+                </tr>
+
+                <!-- Communication 7 -->
+                <tr>
+                    <td>
+                        <select id="communications7_term" name="communications7_term">
+                            <option value="">--select--</option>
+                            <option id="2019 Fall" value="2019 Fall">2019 Fall</option>
+                            <option id="2019 Spring" value="2019 Spring">2019 Spring</option>
+                        </select>
+                    </td>
+                
+                    <td>
+                        <input class="communications" type="checkbox" id="EE584" name="communications7" value="EE584">
+                        <label for="EE584">EE 584 - Wireless Systems Security</label>
+                    </td>
+                </tr>
+
+                <!-- Power Engineering -->
+                <thead>
+                    <tr>
+                        <th>
+                            Concentration 2: Power Engineering
+                        </th>
+                    </tr>
+                </thead>
+
+                <!-- Power Engineering 1 -->
+                <tr>
+                    <td>
+                        <select id="powerEngineering1_term" name="powerEngineering1_term">
+                            <option value="">--select--</option>
+                            <option id="2019 Fall" value="2019 Fall">2019 Fall</option>
+                            <option id="2019 Spring" value="2019 Spring">2019 Spring</option>
+                        </select>
+                    </td>
+
+                    <td>
+                        <input class="powerEngineering" type="checkbox" id="EE575" name="powerEngineering1"
+                            value="EE575">
+                        <label for="EE575">EE 575 - Introduction to Control Theory</label>
+                    </td>
+                </tr>
+
+                <!-- Power Engineering 2 -->
+                <tr>
+                    <td>
+                        <select id="powerEngineering2_term" name="powerEngineering2_term">
+                            <option value="">--select--</option>
+                            <option id="2019 Fall" value="2019 Fall">2019 Fall</option>
+                            <option id="2019 Spring" value="2019 Spring">2019 Spring</option>
+                        </select>
+                    </td>
+                
+                    <td>
+                        <input class="powerEngineering" type="checkbox" id="EE589" name="powerEngineering2" value="EE589">
+                        <label for="EE589">EE 589 - Introduction to Power Engineering</label>
+                    </td>
+                </tr>
+
+                <!-- Power Engineering 3 -->
+                <tr>
+                    <td>
+                        <select id="powerEngineering3_term" name="powerEngineering3_term">
+                            <option value="">--select--</option>
+                            <option id="2019 Fall" value="2019 Fall">2019 Fall</option>
+                            <option id="2019 Spring" value="2019 Spring">2019 Spring</option>
+                        </select>
+                    </td>
+                
+                    <td>
+                        <input class="powerEngineering" type="checkbox" id="EE590" name="powerEngineering3" value="EE590">
+                        <label for="EE590">EE 590 - Smart Grid</label>
+                    </td>
+                </tr>
+
+                <!-- Power Engineering 4 -->
+                <tr>
+                    <td>
+                        <select id="powerEngineering4_term" name="powerEngineering4_term">
+                            <option value="">--select--</option>
+                            <option id="2019 Fall" value="2019 Fall">2019 Fall</option>
+                            <option id="2019 Spring" value="2019 Spring">2019 Spring</option>
+                        </select>
+                    </td>
+                
+                    <td>
+                        <input class="powerEngineering" type="checkbox" id="EE629" name="powerEngineering4" value="EE629">
+                        <label for="EE629">EE 629 - Internet of Things</label>
+                    </td>
+                </tr>
+
+                <!-- Power Engineering 5 -->
+                <tr>
+                    <td>
+                        <select id="powerEngineering5_term" name="powerEngineering5_term">
+                            <option value="">--select--</option>
+                            <option id="2019 Fall" value="2019 Fall">2019 Fall</option>
+                            <option id="2019 Spring" value="2019 Spring">2019 Spring</option>
+                        </select>
+                    </td>
+                
+                    <td>
+                        <input class="powerEngineering" type="checkbox" id="CPE679" name="powerEngineering5" value="CPE679">
+                        <label for="CPE679">CPE 679 Computer and Information Networks</label>
+                    </td>
+                </tr>
+
+                <!-- Power Engineering 6 -->
+                <tr>
+                    <td>
+                        <select id="powerEngineering6_term" name="powerEngineering6_term">
+                            <option value="">--select--</option>
+                            <option id="2019 Fall" value="2019 Fall">2019 Fall</option>
+                            <option id="2019 Spring" value="2019 Spring">2019 Spring</option>
+                        </select>
+                    </td>
+                
+                    <td>
+                        <input class="powerEngineering" type="checkbox" id="CPE691" name="powerEngineering6" value="CPE691">
+                        <label for="CPE691">CPE 691 Information Systems Security</label>
+                    </td>
+                </tr>
+
+                <!-- Electives -->
+                <thead>
+                    <tr>
+                        <th>
+                            Enter 2 Electives
+                        </th>
+                    </tr>
+                </thead>
+
+                <!-- Elective 1 -->
+                <tr>
+                    <td>
+                        <select id="elective1_term" name="elective1_term">
+                            <option value="">--select--</option>
+                            <option id="2019 Fall" value="2019 Fall">2019 Fall</option>
+                            <option id="2019 Spring" value="2019 Spring">2019 Spring</option>
+                        </select>
+                    </td>
+
+                    <td>
+                        <textarea class="elective" id="elective1_code" name="elective1_code" style="resize:none"
+                            rows="1" cols="6" maxlength="6" placeholder="Subject Code"
+                            onkeyup="this.value = this.value.toUpperCase();"></textarea>
+                        <label for="elective1_code"></label>
+
+                        <textarea class="elective" id="elective1" name="elective1" style="resize:none" rows="1"
+                            wrap="soft" maxlength="50" placeholder="Subject Name"></textarea>
+                        <label for="elective1"></label>
+                    </td>
+                </tr>
+
+                <!-- Elective 2 -->
+                <tr>
+                    <td>
+                        <select id="elective2_term" name="elective2_term">
+                            <option value="">--select--</option>
+                            <option id="2019 Fall" value="2019 Fall">2019 Fall</option>
+                            <option id="2019 Spring" value="2019 Spring">2019 Spring</option>
+                        </select>
+                    </td>
+
+                    <td>
+                        <textarea class="elective" id="elective2_code" name="elective2_code" style="resize:none"
+                            rows="1" cols="6" maxlength="6" placeholder="Subject Code"
+                            onkeyup="this.value = this.value.toUpperCase();"></textarea>
+                        <label for="elective2_code"></label>
+
+                        <textarea class="elective" id="elective2" name="elective2" style="resize:none" rows="1"
+                            wrap="soft" maxlength="50" placeholder="Subject Name"></textarea>
+                        <label for="elective2"></label>
+                    </td>
+                </tr>
+
+                <thead>
+                    <tr>
+                        <th>
+                            OR
+                        </th>
+                    </tr>
+                </thead>
+
+                <!-- Thesis -->
+                <thead>
+                    <tr>
+                        <th>
+                            Select Thesis
+                        </th>
+                    </tr>
+                </thead>
+
+                <!-- Thesis -->
+                <tr>
+                    <td>
+                        <select id="thesis_term" name="thesis_term">
+                            <option value="">--select--</option>
+                            <option id="2019 Fall" value="2019 Fall">2019 Fall</option>
+                            <option id="2019 Spring" value="2019 Spring">2019 Spring</option>
+                        </select>
+                    </td>
+
+                    <td>
+                        <input type="radio" id="thesis" name="thesis" value="thesis">
+                        <label for="thesis">6-credit Research Project/Thesis</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <button type="submit" id="submit">Submit</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+
+    <!-- <pre id="log">
+    </pre> -->
+
+    <script src="./pagescript.js">
+    </script>
+</body>
+
+</html>
